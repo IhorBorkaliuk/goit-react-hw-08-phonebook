@@ -1,12 +1,15 @@
+
+
+
 export const AuthNav = () => {
   return (
     <div>
-      <NavLink to="/register">
+      <link to="/register">
         Register
-      </NavLink>
-      <NavLink to="/login">
+      </link>
+      <link to="/login">
         Log In
-      </NavLink>
+      </link>
     </div>
   );
 };
