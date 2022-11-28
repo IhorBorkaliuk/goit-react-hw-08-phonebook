@@ -1,15 +1,16 @@
+import { Link } from "react-router-dom";
 
 
 
 export const AuthNav = () => {
   return (
     <div>
-      <link to="/register">
+      <Link to="/register">
         Register
-      </link>
-      <link to="/login">
+      </Link>
+      <Link to="/login">
         Log In
-      </link>
+      </Link>
     </div>
   );
 };
