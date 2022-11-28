@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 import { fetchContacts, addContact, deleteContact } from './operations';
 import Notiflix from 'notiflix';
 
-
 const handlePending = state => {
   state.isLoading = true;
 };

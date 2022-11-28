@@ -2,16 +2,18 @@ import { Filter } from './Filter/Filter';
 import { Title } from './ContactsList/ContactsListStyled';
 import { Form } from './Form/Form';
 import { AppWrapper } from './ContactsList/ContactsListStyled';
-import { selectContacts, selectIsLoading, selectFilter } from 'redux/selectors';
+import {
+  selectContacts,
+  selectIsLoading,
+  selectFilter,
+} from 'redux/contacts/selectors';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchContacts } from 'redux/operations';
+import { fetchContacts } from 'redux/contacts/operations';
 import { useEffect } from 'react';
 import { Notify } from 'services/Notify';
 import { Loader } from './Loader/Loader';
 import { StyledLoader } from 'components/Loader/StyledLoader';
 import { ContactList } from 'components/ContactsList/ContactsList';
-
-
 
 export function App() {
   const contacts = useSelector(selectContacts);
@@ -24,7 +26,6 @@ export function App() {
     dispatch(fetchContacts());
   }, [dispatch]);
 
-
   const getFilteredContacts = () => {
     if (!filter) {
       return contacts;
@@ -36,8 +37,6 @@ export function App() {
     );
   };
   const filteredContacts = getFilteredContacts(filter, contacts);
-
-
 
   return (
     <AppWrapper>

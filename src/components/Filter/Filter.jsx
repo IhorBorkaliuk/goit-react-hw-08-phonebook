@@ -1,16 +1,11 @@
 import { LabelFilter, InputFilter, Wrapper } from './FilterStyled';
-import { selectFilter } from 'redux/selectors';
+import { selectFilter } from 'redux/contacts/selectors';
 import { useSelector, useDispatch } from 'react-redux';
-import { contactsFilter } from 'redux/filterSlice';
-
-
-
-
-
+import { contactsFilter } from 'redux/contacts/filterSlice';
 
 export const Filter = () => {
-  const filter = useSelector(selectFilter)
-  const dispatch = useDispatch()
+  const filter = useSelector(selectFilter);
+  const dispatch = useDispatch();
 
   const handleChange = e => {
     const { value } = e.target;
@@ -24,4 +19,4 @@ export const Filter = () => {
       </LabelFilter>
     </Wrapper>
   );
-}
+};

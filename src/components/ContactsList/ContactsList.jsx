@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, List, ListItem, LabelText } from './ContactsListStyled';
 import { useDispatch } from 'react-redux';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/contacts/operations';
 
 export function ContactList({ contacts }) {
   const dispatch = useDispatch();
@@ -20,7 +20,6 @@ export function ContactList({ contacts }) {
   });
   return <List>{item}</List>;
 }
-
 
 ContactList.propTypes = {
   contacts: PropTypes.arrayOf(

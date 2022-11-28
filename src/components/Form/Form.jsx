@@ -3,28 +3,24 @@ import { ButtonForm } from './FormStyled';
 import { FormStyled, Text, Label, Input } from './FormStyled';
 import Notiflix from 'notiflix';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/operations';
-import { selectContacts } from 'redux/selectors';
-
-
-
-
+import { addContact } from 'redux/contacts/operations';
+import { selectContacts } from 'redux/contacts/selectors';
 
 export function Form() {
   const [name, setName] = useState('');
-  const [phone, setNumber] = useState('')
+  const [phone, setNumber] = useState('');
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
 
-  console.log(contacts)
-  
+  console.log(contacts);
+
   const hasAlreadyAdded = ({ name }) =>
-      contacts.find(el => el.name.toLowerCase() === name.toLowerCase());
+    contacts.find(el => el.name.toLowerCase() === name.toLowerCase());
 
   const handleChange = evt => {
     const { name, value } = evt.target;
     if (name === 'name') {
-      setName(value)
+      setName(value);
     }
     if (name === 'phone') {
       setNumber(value);
@@ -34,18 +30,18 @@ export function Form() {
   const handleSubmit = evt => {
     const contact = { name, phone };
     evt.preventDefault();
-          if (hasAlreadyAdded(contact)) {
-            Notiflix.Notify.warning(`${contact.name} is already in contacts`);
-            reset();
-            return;
-          }
+    if (hasAlreadyAdded(contact)) {
+      Notiflix.Notify.warning(`${contact.name} is already in contacts`);
+      reset();
+      return;
+    }
     dispatch(addContact(contact));
     reset();
   };
 
   const reset = () => {
     setName('');
-    setNumber('')
+    setNumber('');
   };
 
   return (
