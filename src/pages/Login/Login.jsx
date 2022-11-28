@@ -1,12 +1,13 @@
+import { Form } from "components/Form/Form";
 
 
 export const Login = () => {
 return (
-  <Container>
-    <Title>
+  <div>
+    <h1>
       Login page
-    </Title>
-    <LoginForm />
-  </Container>
+    </h1>
+    <Form />
+  </div>
 );
 }
