@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/643.7d7080db.chunk.js","mappings":"iMAGaA,EAAW,WACpB,OACE,0BACE,+CAKP,C","sources":["pages/Register/Register.jsx"],"sourcesContent":["\n\n\nexport const Register = () => {\n    return (\n      <div>\n        <h1>\n          Registration Page\n        </h1>\n      </div>\n    );\n}"],"names":["Register"],"sourceRoot":""}
