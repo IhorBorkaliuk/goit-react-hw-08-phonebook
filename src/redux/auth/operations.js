@@ -14,10 +14,10 @@ const clearAuthUser = () => {
 };
 
 export const registerUser = createAsyncThunk(
-  'users/signup',
+  'users/register',
   async (credentials, thunkAPI) => {
     try {
-      const response = await axios.post('/users/signup', credentials);
+      const response = await axios.post('/users/register', credentials);
       setAuthUser(response.data.token);
       return response.data;
     } catch (error) {
