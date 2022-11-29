@@ -6,7 +6,6 @@ import { deleteContact } from 'redux/contacts/operations';
 
 export function ContactList({ contacts }) {
   const dispatch = useDispatch();
-  console.log(contacts);
   const item = contacts.map(({ name, phone, id }) => {
     return (
       <ListItem key={id}>

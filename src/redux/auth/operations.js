@@ -19,6 +19,7 @@ export const registerUser = createAsyncThunk(
     try {
       const response = await axios.post('/users/signup', credentials);
       setAuthUser(response.data.token);
+
       return response.data;
     } catch (error) {
         Notiflix.Notify.warning(

@@ -12,8 +12,6 @@ export function Form() {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
 
-  console.log(contacts);
-
   const hasAlreadyAdded = ({ name }) =>
     contacts.find(el => el.name.toLowerCase() === name.toLowerCase());
 
