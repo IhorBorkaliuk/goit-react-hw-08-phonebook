@@ -35,11 +35,12 @@ export const Filter = () => {
   
   return (
     <Wrapper>
-      <LabelFilter>
-        Find contacts by name
-        <InputFilter type="text" value={filter} onChange={handleChange} />
-      </LabelFilter>
-      {contacts.length > 0 && <Filter />}
+      {contacts.length > 0 && (
+        <LabelFilter>
+          Find contacts by name
+          <InputFilter type="text" value={filter} onChange={handleChange} />
+        </LabelFilter>
+      )}
       {contacts.length === 0 && !isLoading && (
         <TitleHome>Додайте свій перший контакт до записної книжки</TitleHome>
       )}

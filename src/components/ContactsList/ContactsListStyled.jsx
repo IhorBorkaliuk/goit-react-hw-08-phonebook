@@ -8,28 +8,29 @@ export const Title = styled.h2`
 `;
 
 export const Button = styled.button`
-  margin-left: 15px;
-  width: 120px;
-  height: 34px;
-  color: #fff;
-  border-radius: 5px;
-  padding: 8px 14px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  background: rgb(105, 105, 111);
-  background: linear-gradient(0deg, #595961 0%, #4d4d4f 100%);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
+  text-decoration: none;
   display: inline-block;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-  outline: none;
-
+  padding: 15px 30px;
+  border: #565678;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 40px 40px #565678 inset, 0 0 0 0 #565678;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+  transition: 0.15s ease-in-out;
   :hover {
-    background: rgb(0, 3, 255);
-    background: linear-gradient(0deg, #3e3e3f 0%, #212122 100%);
+    box-shadow: 0 0 10px 0 #565678 inset, 0 0 10px 4px #565678;
+    color: #565678;
+  }
+  :focus {
+    box-shadow: 0 0 10px 0 #565678 inset, 0 0 10px 4px #565678;
+    color: #565678;
+  }
+  &.active {
+    box-shadow: 0 0 10px 0 #565678 inset, 0 0 10px 4px #565678;
+    color: #565678;
   }
 `;
 
@@ -51,9 +52,9 @@ export const ListItem = styled.li`
 `;
 
 export const LabelText = styled.p`
-margin: 0px;
-  margin-left: 20px;
-`
+  margin: 0px 20px;
+  color: #565678;
+`;
 
 export const AppWrapper = styled.div`
   margin: 0 auto;

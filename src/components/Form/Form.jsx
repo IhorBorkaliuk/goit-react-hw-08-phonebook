@@ -9,7 +9,7 @@ import { selectContacts } from 'redux/contacts/selectors';
 
 export function Form() {
   const [name, setName] = useState('');
-  const [phone, setNumber] = useState('');
+  const [number, setNumber] = useState('');
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
 
@@ -21,13 +21,13 @@ export function Form() {
     if (name === 'name') {
       setName(value);
     }
-    if (name === 'phone') {
+    if (name === 'number') {
       setNumber(value);
     }
   };
 
   const handleSubmit = evt => {
-    const contact = { name, phone };
+    const contact = { name, number };
     evt.preventDefault();
     if (hasAlreadyAdded(contact)) {
       Notiflix.Notify.warning(`${contact.name} is already in contacts`);
@@ -66,8 +66,8 @@ export function Form() {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
             type="tel"
-            name="phone"
-            value={phone}
+            name="number"
+            value={number}
             onChange={handleChange}
           />
         </Label>
