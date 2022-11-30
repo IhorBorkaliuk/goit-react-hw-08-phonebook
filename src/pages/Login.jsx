@@ -1,10 +1,11 @@
 import { LoginForm } from "components/LoginForm/LoginForm";
+import { TitleHome } from "./Home/HomeStyled";
 
 
 export default function Login() {
   return (
     <div>
-      <h1>Login page</h1>
+      <TitleHome>Login page</TitleHome>
       <LoginForm />
     </div>
   );

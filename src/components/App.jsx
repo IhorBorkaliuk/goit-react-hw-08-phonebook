@@ -9,7 +9,7 @@ import { useEffect, lazy } from 'react';
 import { Notify } from 'services/Notify';
 import { selectIsRefreshing } from 'redux/auth/selectors';
 
-const HomePage = lazy(() => import('../pages/Home'));
+const HomePage = lazy(() => import('../pages/Home/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
 const LoginPage = lazy(() => import('../pages/Login'));
 const ContactsPage = lazy(() => import('../pages/Contacts'));

@@ -1,6 +1,8 @@
+import { FormButton } from 'components/RegisterForm/RegisterFormStyled';
 import { useDispatch, useSelector } from 'react-redux';
 import { logOutUser } from 'redux/auth/operations';
 import { selectUserEmail } from 'redux/auth/selectors';
+import { LogOutWrapper, WelcomeText } from 'components/RegisterForm/RegisterFormStyled';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -8,11 +10,11 @@ export const UserMenu = () => {
   console.log(userEmail);
 
   return (
-    <div>
-      <p>Welcome, {userEmail}!</p>
-      <button type="button" onClick={() => dispatch(logOutUser())}>
+    <LogOutWrapper>
+      <WelcomeText>Welcome, {userEmail}!</WelcomeText>
+      <FormButton type="button" onClick={() => dispatch(logOutUser())}>
         Logout
-      </button>
-    </div>
+      </FormButton>
+    </LogOutWrapper>
   );
 };

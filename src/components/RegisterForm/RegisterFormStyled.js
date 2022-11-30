@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const FormStyled = styled.form`
   margin-top: 50px;
@@ -26,10 +26,10 @@ export const FormStyled = styled.form`
   }
 `;
 
-export const Text = styled.p`
-  font-size: 22px;
-  margin-right: 14px;
-  font-weight: 500;
+export const FormInner = styled.div`
+  position: relative;
+  justify-content: center;
+  text-align: center;
 `;
 
 export const Label = styled.label`
@@ -59,7 +59,7 @@ export const Input = styled.input`
   }
 `;
 
-export const ButtonForm = styled.button`
+export const FormButton = styled.button`
   text-decoration: none;
   display: inline-block;
   padding: 15px 30px;
@@ -86,3 +86,15 @@ export const ButtonForm = styled.button`
   }
 `;
 
+export const LogOutWrapper = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+`
+
+export const WelcomeText = styled.p`
+  font-family: 'Montserrat', sans-serif;
+  margin: 0px 20px;
+  font-size: 18px;
+  color: #565678;
+`;

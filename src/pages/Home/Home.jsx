@@ -1,11 +1,11 @@
-
+import { TitleHome } from "./HomeStyled";
 
 export default function Home() {
   return (
     <div>
-      <h1>
+      <TitleHome>
         Phonebook
-      </h1>
+      </TitleHome>
     </div>
   );
 }

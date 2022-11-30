@@ -7,7 +7,7 @@ import {
   selectFilter,
 } from 'redux/contacts/selectors';
 import { ContactList } from 'components/ContactsList/ContactsList';
-import { Title } from 'components/ContactsList/ContactsListStyled';
+import { TitleHome } from 'pages/Home/HomeStyled';
 
 export const Filter = () => {
   const dispatch = useDispatch();
@@ -41,7 +41,7 @@ export const Filter = () => {
       </LabelFilter>
       {contacts.length > 0 && <Filter />}
       {contacts.length === 0 && !isLoading && (
-        <Title>Додайте свій перший контакт до записної книжки</Title>
+        <TitleHome>Додайте свій перший контакт до записної книжки</TitleHome>
       )}
       {contacts && <ContactList contacts={filteredContacts} />}
     </Wrapper>

@@ -3,6 +3,7 @@ import { Filter } from "components/Filter/Filter";
 import { useDispatch } from "react-redux";
 import { fetchContacts } from "redux/contacts/operations";
 import { useEffect } from "react";
+import { TitleHome } from "./Home/HomeStyled";
 
 
 export default function Contacts () {
@@ -14,7 +15,7 @@ export default function Contacts () {
 
   return (
     <div>
-      <h1>Phonebook</h1>
+      <TitleHome>Phonebook</TitleHome>
       <Form />
       <Filter />
     </div>

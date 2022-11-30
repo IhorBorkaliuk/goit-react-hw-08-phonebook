@@ -56,7 +56,6 @@ margin: 0px;
 `
 
 export const AppWrapper = styled.div`
-  max-width: 1200px;
   margin: 0 auto;
   justify-content: center;
 `
