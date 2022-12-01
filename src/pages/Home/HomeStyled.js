@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const TitleHome = styled.nav`
+export const TitleHome = styled.h1`
   position: relative;
   padding-bottom: 0.5rem;
   margin-top: 50px;

@@ -29,15 +29,15 @@ export const RegisterForm = () => {
       <FormInner>
         <Label>
           Username
-          <Input type="text" name="name" />
+          <Input type="text" name="name" placeholder="Your name" />
         </Label>
         <Label>
           Email
-          <Input type="email" name="email" />
+          <Input type="email" name="email" placeholder="example@mail.com" />
         </Label>
         <Label>
           Password
-          <Input type="password" name="password" />
+          <Input type="password" name="password" placeholder="*******" />
         </Label>
         <FormButton type="submit">Register</FormButton>
       </FormInner>

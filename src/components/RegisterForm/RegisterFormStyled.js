@@ -34,7 +34,6 @@ export const FormInner = styled.div`
 
 export const Label = styled.label`
   display: block;
-  padding-left: 15px;
   font-family: 'Roboto', sans-serif;
   color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
@@ -43,8 +42,8 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   display: block;
-  width: 100%;
-  padding: 0 15px;
+  width: 95%;
+  padding-left: 25px;
   margin: 10px 0 15px;
   border-width: 0;
   line-height: 40px;
